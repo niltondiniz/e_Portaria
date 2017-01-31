@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{6C19CE68-BD16-4AD8-8F18-88E6A71C1C37}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Status do ePortaria">
+    <Files>
+      <File FileName="Status do ePortaria" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ePortaria" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ePortaria.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D44B4613-9E63-4A33-931E-E9B78C7630B4" />
+</Properties>
