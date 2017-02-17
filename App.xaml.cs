@@ -4,11 +4,16 @@ namespace ePortaria
 {
 	public partial class App : Application
 	{
+
+		public MasterPageViewModel masterPageViewModel;
+
 		public App()
 		{
 			InitializeComponent();
 
-			MainPage = new ePortariaPage();
+			masterPageViewModel = new MasterPageViewModel();
+			MainPage = new Main();
+
 		}
 
 		protected override void OnStart()

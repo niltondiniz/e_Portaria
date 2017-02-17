@@ -1,13 +1,27 @@
 ﻿<Properties StartupConfiguration="{6C19CE68-BD16-4AD8-8F18-88E6A71C1C37}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workbench ActiveDocument="Status do ePortaria">
     <Files>
+      <File FileName="View/MasterPage.xaml.cs" Line="24" Column="24" />
+      <File FileName="View/Main.xaml.cs" Line="5" Column="1" />
       <File FileName="Status do ePortaria" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ePortaria" expanded="True" selected="True" />
+          <Node name="ePortaria" expanded="True" selected="True">
+            <Node name="ePortaria" expanded="True">
+              <Node name="View" expanded="True">
+                <Node name="MasterPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="ePortaria.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -16,5 +30,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ePortaria.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.FBAZB6015919" />
   <MonoDevelop.Ide.ItemProperties.ePortaria.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D44B4613-9E63-4A33-931E-E9B78C7630B4" />
 </Properties>
