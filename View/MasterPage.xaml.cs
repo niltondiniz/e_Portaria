@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using ePortaria.ViewModel;
+using ePortaria.Model;
 
 using Xamarin.Forms;
 
@@ -19,28 +21,21 @@ namespace ePortaria
 			InitializeComponent();
 
 			var masterPageItems = new List<MasterPageItem>();
+
+            foreach(Estabelecimento estabelecimentos in ((App)App.Current).EntidadeVM.ListaEstabelecimento)
+            {
+                masterPageItems.Add(new MasterPageItem
+                {
+                    Title = estabelecimentos.Nome, 
+                    IconSource = "ic_home.png", 
+                    TargetType = typeof(Controle), 
+                    Estabelecimento = estabelecimentos
+                });
+            }
 			masterPageItems.Add(new MasterPageItem
 			{
-				Title = "Garagem AP",
-				IconSource = "ic_home.png",
-				TargetType = typeof(ePortariaPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Loja Vila Isabel",
-				IconSource = "ic_cart.png",
-				TargetType = typeof(ePortariaPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Loja Centro",
-				IconSource = "ic_cart.png",
-				TargetType = typeof(ePortariaPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Armazém",
-				IconSource = "ic_store.png",
+				Title = " ",
+				IconSource = "",
 				TargetType = typeof(ePortariaPage)
 			});
 			masterPageItems.Add(new MasterPageItem
@@ -49,10 +44,23 @@ namespace ePortaria
 				IconSource = "ic_settings.png",
 				TargetType = typeof(ePortariaPage)
 			});
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "Perfil",
+                IconSource = "ic_settings.png",
+                TargetType = typeof(Perfil),
+                Estabelecimento = new Estabelecimento()
+			});
 			masterPageItems.Add(new MasterPageItem
 			{
 				Title = "Sobre",
 				IconSource = "ic_information.png",
+				TargetType = typeof(ePortariaPage)
+			});
+			masterPageItems.Add(new MasterPageItem
+			{
+				Title = "Sair",
+				IconSource = "ic_exit_to_app.png",
 				TargetType = typeof(ePortariaPage)
 			});
 			ListView.ItemsSource = masterPageItems;

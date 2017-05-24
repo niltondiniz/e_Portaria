@@ -1,4 +1,7 @@
 ﻿using Xamarin.Forms;
+using ePortaria.ViewModel;
+using ePortaria.Model;
+using System.Threading.Tasks;
 
 namespace ePortaria
 {
@@ -6,13 +9,28 @@ namespace ePortaria
 	{
 
 		public MasterPageViewModel masterPageViewModel;
+        public EntidadeViewModel EntidadeVM;
+        public EstabelecimentoViewModel EstabelecimentoVW;
+        public string EnderecoIp;
 
 		public App()
 		{
 			InitializeComponent();
 
-			masterPageViewModel = new MasterPageViewModel();
-			MainPage = new Main();
+            EntidadeVM = new EntidadeViewModel();
+            EstabelecimentoVW = new EstabelecimentoViewModel();
+            //EntidadeVM.GetDados();
+
+
+            if ( EntidadeVM.Id > 0 )
+            {
+				masterPageViewModel = new MasterPageViewModel();
+				MainPage = new Main();
+            }
+            else
+            {
+                MainPage = new Login();  
+            }
 
 		}
 

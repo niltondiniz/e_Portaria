@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ePortaria.Perfil" Title="Perfil">
+	<ContentPage.Content>
+        <StackLayout Orientation="Vertical" x:Name="Form" Margin="0,5,0,0">
+            <!--<Entry Text="{Binding No    me}" x:Name="txtNome" Placeholder="Nome" Margin="0,0,0,5" FontSize="15" />
+            <Entry Text="{Binding Telefone}" x:Name="txtTelefone" Placeholder="(00)0000-0000" Margin="0,0,0,5"  />
+            <Entry Text="{Binding Telefone2}" x:Name="txtTelefone2" Placeholder="(00)00000-0000" Margin="0,0,0,5"  />
+            <Entry Text="{Binding Imei}" x:Name="txtImei" Placeholder="Imei" Margin="0,0,0,5"  />
+            <Entry Text="{Binding Email}" x:Name="txtEmail" Placeholder="Email" Margin="0,0,0,5"  />
+            <Entry Text="{Binding Endereco}" x:Name="txtEndereco" Placeholder="Endereco" Margin="0,0,0,5"  />
+            <Entry Text="{Binding Bairro}" x:Name="txtBairro" Placeholder="Bairro" Margin="0,0,0,5"  />
+            <Entry x:Name="txtCidade" Placeholder="Cidade" Margin="0,0,0,5"  />
+            <Entry Text="{Binding Cep}" x:Name="txtCep" Placeholder="00000-000" Margin="0,0,0,5"  />-->
+
+            <StackLayout Padding="16,0,0,0" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+                <Label  Text="Dados do Usuário" FontSize="14" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" BackgroundColor="#DCDCDC" HeightRequest="1">
+            </StackLayout>
+            <ListView x:Name="listView" ItemsSource="{Binding DadosPerfil}" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="16,0,0,0" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+                                <Label Text="{Binding Key}" VerticalOptions="Center" FontSize="12" FontAttributes="Bold" />
+                                <Label Text="{Binding Value}" VerticalOptions="Center" FontSize="12" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

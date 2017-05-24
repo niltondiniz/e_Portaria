@@ -22,6 +22,14 @@ namespace ePortaria
 				Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
 				masterPage.ListView.SelectedItem = null;
 				IsPresented = false;
+
+                /*if(item.Estabelecimento != null)
+                {
+                    ((App)App.Current).EstabelecimentoVW.ControlDescricao = item.Estabelecimento.control_descricao;
+                    ((App)App.Current).EstabelecimentoVW.ControlConexao = item.Estabelecimento.control_conexao;
+                    ((App)App.Current).EstabelecimentoVW.ControlIp = item.Estabelecimento.control_ip;
+                }
+                    ((App)App.Current).EnderecoIp = item.Estabelecimento.control_ip;*/
 			}
 
 		}
