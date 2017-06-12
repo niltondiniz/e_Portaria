@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		xmlns:local="clr-namespace:ePortaria" x:Class="ePortaria.Main" MasterBehavior="Split" Title="CPAUTO">
+		xmlns:local="clr-namespace:ePortaria" x:Class="ePortaria.Main" MasterBehavior="Split">
 	<MasterDetailPage.Master>
 		<local:MasterPage x:Name="masterPage" />
 	</MasterDetailPage.Master>
 	<MasterDetailPage.Detail>
-		<NavigationPage>
-			<x:Arguments>
-				<local:ePortariaPage />
-			</x:Arguments>
-		</NavigationPage>
+        <NavigationPage Title="Controle de Portão" Tint="White" BarBackgroundColor="#00796B" BarTextColor="White">
+            <x:Arguments>
+                <local:Controle />
+            </x:Arguments>
+        </NavigationPage>
 	</MasterDetailPage.Detail>
 </MasterDetailPage>

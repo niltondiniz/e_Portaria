@@ -4,15 +4,19 @@
     x:Class="ePortaria.Login">
 	<ContentPage.Content>
         <ScrollView Orientation="Vertical" BackgroundColor="#FFFFFF">
-            <StackLayout Orientation="Vertical" x:Name="ContainerPagina" >
-                <StackLayout HorizontalOptions="Center" Padding="0,150,0,0" x:Name="ContainerImagem" Orientation="Horizontal">
-                    <Image WidthRequest="200" Source="logo_sem_descricao.png"/> 
+            <StackLayout Orientation="Vertical" x:Name="ContainerPagina">
+                <StackLayout HorizontalOptions="Center" Padding="0,80,0,0" x:Name="ContainerImagem" Orientation="Horizontal">
+                    <Image WidthRequest="250" Source="logo_sem_descricao.png"/> 
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,100,0,0" x:Name="ContainerEmail">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,150,0,0" x:Name="ContainerEmail">
                     <Entry x:Name="Email" Text="{Binding Email}" BackgroundColor="White" Placeholder="Informe seu email" Keyboard="Email" HorizontalTextAlignment="Center" TextColor="#696969" FontSize="16" WidthRequest="250"/>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" x:Name="ContainerBotao" Padding="0,30,0,0">
+                <StackLayout Orientation="Vertical" x:Name="ContainerBotao" Padding="0,30,0,0">
+                    <Label Text="{Binding Mensagem}" FontSize="12" HorizontalTextAlignment="Center" TextColor="Red" />
                     <Button HorizontalOptions="CenterAndExpand" Clicked="OnButtonClicked" Text="Entrar" WidthRequest="250" TextColor="#696969" FontSize="20"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" >
+                    <Label Text="Versão 1.0" FontSize="8" HorizontalTextAlignment="Center" TextColor="#696969" Margin="0,0,0,5" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

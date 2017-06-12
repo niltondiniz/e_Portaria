@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using ePortaria.ViewModel;
-
 using Xamarin.Forms;
 
 namespace ePortaria
@@ -10,8 +9,9 @@ namespace ePortaria
     {
         public Controle()
         {
-            BindingContext = ((App)App.Current).EstabelecimentoVW;
             InitializeComponent();
+            BindingContext = ((App)App.Current).controleViewModel;
+            //listControles.ItemsSource = ((App)App.Current).controleViewModel.ListaControle;
         }
     }
 }

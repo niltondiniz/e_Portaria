@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ePortaria.Helper
 {
-	public interface IDevice
+	public interface IDeviceLocal
 	{
 		string GetIdentifier();
 	}

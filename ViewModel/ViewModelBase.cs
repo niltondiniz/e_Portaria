@@ -18,7 +18,7 @@ namespace ePortaria.ViewModel
 		public ViewModelBase()
 		{
 			var config = DependencyService.Get<IConfig>();
-			_conexao = new SQLite.Net.SQLiteConnection(config.Plataforma, System.IO.Path.Combine(config.DiretorioDB, "bancodados3.db3"));
+			_conexao = new SQLite.Net.SQLiteConnection(config.Plataforma, System.IO.Path.Combine(config.DiretorioDB, "bancodados1.db3"));
             _conexao.CreateTable<Entidade>();
             _conexao.CreateTable<Estabelecimento>();
             _conexao.CreateTable<ePortaria.Model.Controle>();

@@ -1,23 +1,31 @@
-﻿<Properties StartupConfiguration="{6C19CE68-BD16-4AD8-8F18-88E6A71C1C37}|Default" GitUserInfo="UsingMD">
+﻿<Properties StartupConfiguration="{6991A336-AB54-4ED9-AC3B-FFDBF8A5BC80}|Default" GitUserInfo="UsingMD" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="Status do ePortaria">
     <Files>
+      <File FileName="ViewModel/EntidadeViewModel.cs" Line="408" Column="1" />
+      <File FileName="View/Login.xaml.cs" Line="21" Column="39" />
+      <File FileName="ViewModel/ControleViewModel.cs" Line="6" Column="28" />
+      <File FileName="App.xaml.cs" Line="97" Column="1" />
       <File FileName="Status do ePortaria" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="ePortaria" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/EntidadeViewModel.cs" relfile="ViewModel/EntidadeViewModel.cs" line="392" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/ControleViewModel.cs" relfile="ViewModel/ControleViewModel.cs" line="191" column="37" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="23" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="46" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="74" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="71" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="31" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="44" column="58" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="80" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/EntidadeViewModel.cs" relfile="ViewModel/EntidadeViewModel.cs" line="407" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/EntidadeViewModel.cs" relfile="ViewModel/EntidadeViewModel.cs" line="408" column="1" />
+      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/App.xaml.cs" relfile="App.xaml.cs" line="78" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ePortaria.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.119a3b73d5c608b1b11fe0a1082c196eb9fe2aa4" />
+  <MonoDevelop.Ide.ItemProperties.ePortaria.Droid PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.ePortaria.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.099BD27E-BA80-4E25-9FFF-5ABC03B399B7" />
   <MultiItemStartupConfigurations />
 </Properties>

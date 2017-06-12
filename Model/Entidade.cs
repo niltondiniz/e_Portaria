@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using SQLite.Net.Attributes;
 
@@ -48,7 +49,7 @@ namespace ePortaria.Model
         public string dt_cadastro { get; set; }
 		[JsonProperty("dt_modificado")]
         public string dt_modificado { get; set; }
-
+        public DateTime dt_expiracao { get; set; }
         [Ignore]
         public List<Estabelecimento> ListaEstabelecimento { get; set; }
          

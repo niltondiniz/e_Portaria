@@ -14,15 +14,16 @@ namespace ePortaria
 		public string Titulo { get; set; }
 		public string Descricao { get; set; }
 		public string Imagem { get; set; }
+        public List<MasterPageItem> masterPageItems { get; set; }
 
 		public MasterPage()
 		{
 			BindingContext = ((App)App.Current).masterPageViewModel;
 			InitializeComponent();
 
-			var masterPageItems = new List<MasterPageItem>();
+			masterPageItems = new List<MasterPageItem>();
 
-            foreach(Estabelecimento estabelecimentos in ((App)App.Current).EntidadeVM.ListaEstabelecimento)
+            foreach(Estabelecimento estabelecimentos in ((App)App.Current).estabelecimentoVW.ListaEstabelecimento)
             {
                 masterPageItems.Add(new MasterPageItem
                 {

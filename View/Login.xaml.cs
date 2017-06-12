@@ -1,6 +1,7 @@
 ﻿
 using System;
 using ePortaria.Helper;
+using ePortaria.Model;
 using Plugin.DeviceInfo;
 using Xamarin.Forms;
 
@@ -10,23 +11,14 @@ namespace ePortaria
     {
         public Login()
         {
-            BindingContext = ((App)App.Current).EntidadeVM;
+            BindingContext = ((App)App.Current).entidadeVM;
             InitializeComponent();
         }
 
-		async void OnButtonClicked(object sender, EventArgs args)
-		{
-            ((App)Application.Current).EntidadeVM.Imei = CrossDevice.Hardware.DeviceId;
-
-            var logado = await ((App)Application.Current).EntidadeVM.GetDados(((App)Application.Current).EntidadeVM.Email, ((App)Application.Current).EntidadeVM.Imei.Substring(0,20));
-            if(logado)
-            {
-                ((App)App.Current).MainPage = new Main();
-            }
-            else
-            {
-                ((App)App.Current).EntidadeVM.Email = "Deu Ruim!";
-            }
+        async void OnButtonClicked(object sender, EventArgs args)
+        {
+            ((App)App.Current).entidadeVM.Mensagem = "";
+            ((App)App.Current).GerenciaLoginAsync();
         }
 
     }

@@ -33,6 +33,7 @@ namespace ePortaria.ViewModel
         private object _codigo_tempo;
         private string _dt_cadastro;
         private string _dt_modificado;
+        private string _mensagem;
         public ObservableCollection<Estabelecimento> _listaEstabelecimento;
         public ObservableCollection<KeyValuePair<String, String>> _dadosPerfil;
 
@@ -126,10 +127,13 @@ namespace ePortaria.ViewModel
 			get { return _imei; }
 			set
 			{
+                if (_imei == null)
+                    _imei = "";
+                
 				if (value != _imei)
 				{
 					_imei = value;
-					OnPropertyChanged("Imei");
+					//OnPropertyChanged("Imei");
 				}
 			}
 		}
@@ -138,10 +142,13 @@ namespace ePortaria.ViewModel
 			get { return _email; }
 			set
 			{
+                if (_email == null)
+                    _email = "";
+                
 				if (value != _email)
 				{
 					_email = value;
-					OnPropertyChanged("Email");
+					//OnPropertyChanged("Email");
 				}
 			}
 		}
@@ -321,6 +328,19 @@ namespace ePortaria.ViewModel
 			} 
         }
 
+		public string Mensagem
+		{
+			get { return _mensagem; }
+			set
+			{
+				if (value != _mensagem)
+				{
+					_mensagem = value;
+					OnPropertyChanged("Mensagem");
+				}
+			}
+		}
+
         public EntidadeViewModel()
         {
             
@@ -333,7 +353,7 @@ namespace ePortaria.ViewModel
 			PropertyChanged(this, new PropertyChangedEventArgs(nome));
 		}
 
-        private void PerfilToLista(Entidade entidade)
+        public void PerfilToLista(Entidade entidade)
         {
             /*this._dadosPerfil.Add(new KeyValuePair<String, String>("Id", entidade.id));
             this._dadosPerfil.Add(new KeyValuePair<String, String>("FK_Permissao", entidade.fk_permissao));
@@ -357,7 +377,7 @@ namespace ePortaria.ViewModel
 
         }
 
-        private void DadosToVM(Entidade entidade)
+        public void DadosToVM(Entidade entidade)
         {
             this._id = entidade.id;
             this._fk_permissao = entidade.fk_permissao;
@@ -380,32 +400,27 @@ namespace ePortaria.ViewModel
             this._dt_modificado = entidade.dt_modificado;
         }
 
-        public async Task<bool> GetDados(string email, string imei)
+        public async Task<Usuario> GetDados(string email, string imei)
 		{
 			try
-			{
+            {
                 var resultado = await RequestClient.GetRequest(RequestClient.httpBase, RequestClient.httpCompl, email, imei);
-
                 Response resposta = JsonConvert.DeserializeObject<Response>(resultado);
-
-                DadosToVM(resposta.data.usuario.entidade);
-                PerfilToLista(resposta.data.usuario.entidade);
-
-                foreach(Estabelecimento estabelecimento in resposta.data.usuario.estabelecimento)
+                if (resposta.data.usuario != null)
                 {
-                    ListaEstabelecimento.Add(estabelecimento);
-                    ((App)App.Current).EstabelecimentoVW.ListaEstabelecimento.Add(estabelecimento);
+                    DadosToVM(resposta.data.usuario.entidade);
+                    PerfilToLista(resposta.data.usuario.entidade);
+                    return resposta.data.usuario;
+                }else{
+                    return null;
                 }
 
-                return true;
-
-			}
-			catch (Exception e)
+            }
+            catch (Exception e)
 			{
 				Debug.WriteLine(e.Message);
-                return false;
+                return null;
 			}
 		}
-
     }
 }

@@ -7,6 +7,7 @@ namespace ePortaria.Model
 	{
         [PrimaryKey, AutoIncrement]
 		public int id { get; set; }
+        public int estabelecimento { get; set; }
 		public string descricao { get; set; }
 		public string conexao { get; set; }
 		public string status { get; set; }

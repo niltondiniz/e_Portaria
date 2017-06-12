@@ -12,7 +12,7 @@ namespace ePortaria
         {
             //var entidadeVM = new EntidadeViewModel();
             //entidadeVM.GetDados();
-            BindingContext = ((App)App.Current).EntidadeVM;
+            BindingContext = ((App)App.Current).entidadeVM;
             InitializeComponent();
         }
     }

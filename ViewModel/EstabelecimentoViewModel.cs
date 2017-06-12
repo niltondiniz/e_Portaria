@@ -417,6 +417,16 @@ namespace ePortaria.ViewModel
 
 		}
 
+		public void EstabelecimentosVw(List<Estabelecimento> listaEstabelecimento)
+		{
+			foreach (Estabelecimento estabelecimento in listaEstabelecimento)
+			{
+				//ListaEstabelecimento.Add(estabelecimento);
+				((App)App.Current).estabelecimentoVW.ListaEstabelecimento.Add(estabelecimento);
+
+			}
+		}
+
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		private void OnPropertyChanged(string nome)

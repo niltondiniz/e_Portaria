@@ -13,25 +13,40 @@ namespace ePortaria
 			masterPage.ListView.ItemSelected += OnItemSelected;
 		}
 
+		protected override void OnAppearing()
+		{
+            if (masterPage.masterPageItems.Count > 0)
+                masterPage.ListView.SelectedItem = masterPage.masterPageItems[0];
+        }
+
 		void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 
 			var item = e.SelectedItem as MasterPageItem;
 			if (item != null)
 			{
-				Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType))
+                {
+                    BarBackgroundColor = Color.FromHex("#00796B"),
+                    BarTextColor = Color.White,
+                };
+
 				masterPage.ListView.SelectedItem = null;
 				IsPresented = false;
 
-                /*if(item.Estabelecimento != null)
-                {
-                    ((App)App.Current).EstabelecimentoVW.ControlDescricao = item.Estabelecimento.control_descricao;
-                    ((App)App.Current).EstabelecimentoVW.ControlConexao = item.Estabelecimento.control_conexao;
-                    ((App)App.Current).EstabelecimentoVW.ControlIp = item.Estabelecimento.control_ip;
-                }
-                    ((App)App.Current).EnderecoIp = item.Estabelecimento.control_ip;*/
-			}
+                ((App)App.Current).controleViewModel.ListaControle.Clear();
 
+                if(item.Estabelecimento != null)
+                {
+                    if (item.Estabelecimento.Controle != null)
+                    {   
+                        foreach (Model.Controle controle in item.Estabelecimento.Controle)
+                        {
+                            ((App)App.Current).controleViewModel.ListaControle.Add(controle);
+                        }
+                    }
+                }
+			}
 		}
 	}
 }

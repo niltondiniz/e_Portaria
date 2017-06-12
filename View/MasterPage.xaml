@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		x:Class="ePortaria.MasterPage" Icon="ic_menu.png" Title="CPAUTO">
+		x:Class="ePortaria.MasterPage" Icon="ic_menu.png" Title="Controle de Portão">
 	<ContentPage.Resources>
 		<ResourceDictionary>
 			<OnPlatform x:Key="TextoLabel" x:TypeArguments="Font" iOS="Small" Android="Medium" WinPhone="Medium" />
@@ -18,18 +18,18 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
-		<StackLayout >
-            <StackLayout BackgroundColor="#607D8B" Orientation="Horizontal">
-                <Image Source="logo_drawer.png" WidthRequest="200" Margin="30,40,0,40"/>
+		<StackLayout BackgroundColor="Silver">
+            <StackLayout BackgroundColor="White" Orientation="Horizontal">
+                <Image Source="logo_drawer.png" WidthRequest="270" Margin="0,40,0,40"/>
             </StackLayout>
-			<StackLayout BackgroundColor="#607D22" Orientation="Vertical">
-				<ListView x:Name="listView" BackgroundColor="White" SeparatorVisibility="Default">
+			<StackLayout Orientation="Vertical">
+				<ListView x:Name="listView" BackgroundColor="#00796B" SeparatorVisibility="Default" SeparatorColor="#000000">
 					<ListView.ItemTemplate>
 						<DataTemplate>
 							<ViewCell>
 								<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20,0,20,0">
 									<Image Source="{Binding IconSource}" WidthRequest="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,30,0" />
-									<Label Text="{Binding Title}" VerticalOptions="Center" FontSize="16" />
+									<Label Text="{Binding Title}" VerticalOptions="Center" FontSize="14"  TextColor="#FFFFFF" />
 								</StackLayout>
 							</ViewCell>
 						</DataTemplate>
