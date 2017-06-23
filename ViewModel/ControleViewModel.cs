@@ -138,16 +138,43 @@ namespace ePortaria.ViewModel
         {
             ObservableCollection<IDevice> deviceList = new ObservableCollection<IDevice>();
 			adapter.DeviceDiscovered += (s, a) => deviceList.Add(a.Device);
+            //adapter.ScanMode = ScanMode.LowLatency;
+            adapter.ConnectedDevices.Clear();
+            await adapter.StopScanningForDevicesAsync();
 			await adapter.StartScanningForDevicesAsync();
+
+            try
+            {
+                
+                Debug.WriteLine("STAGUS: " + adapter.ScanMode);
+                Debug.WriteLine("DISPOSITIVOS ENCONTRADOS: "+deviceList.Count);
+                await adapter.ConnectToDeviceAsync(deviceList[0]);    
+            }
+            catch(System.Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
 
             return deviceList;
         }
 
         public  ControleViewModel()
         {
-            
-            SendCommand = new Command(EnviarCommando);
 
+            SendCommand = new Command(EnviarCommando);
+			BleDevices();
+
+        }
+
+        public void BleDevices()
+        {
+            IAdapter adapter = GetBleDevices();
+            ListarDispositivos(adapter);
+        }
+
+        private static IAdapter GetBleDevices()
+        {
             var ble = CrossBluetoothLE.Current;
             var adapter = CrossBluetoothLE.Current.Adapter;
             var state = ble.State;
@@ -155,9 +182,7 @@ namespace ePortaria.ViewModel
             //    {
             //        Debug.WriteLine($"The bluetooth state changed to {e.NewState}");
             //    };
-
-            ListarDispositivos(adapter);
-
+            return adapter;
         }
 
         public void AddControles(ObservableCollection<Estabelecimento> listaEstabelecimento)

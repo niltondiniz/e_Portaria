@@ -94,7 +94,7 @@ namespace ePortaria.ViewModel
 				if (value != _nome)
 				{
 					_nome = value;
-					OnPropertyChanged("Nome");
+					//OnPropertyChanged("Nome");
 				}
 			}
 		}
@@ -336,7 +336,7 @@ namespace ePortaria.ViewModel
 				if (value != _mensagem)
 				{
 					_mensagem = value;
-					OnPropertyChanged("Mensagem");
+					//OnPropertyChanged("Mensagem");
 				}
 			}
 		}

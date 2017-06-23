@@ -75,7 +75,11 @@ namespace ePortaria
             {
 
                 //Faz login trazendo todos os dados do app
-                Usuario usuario = await this.entidadeVM.GetDados(entidadeVM.Email, entidadeVM.Imei);    
+                Usuario usuario = null;
+                var dadosUsuario = await this.entidadeVM.GetDados(entidadeVM.Email, entidadeVM.Imei);
+
+                if (dadosUsuario != null)
+                    usuario = dadosUsuario;
 
                 if (usuario != null)
                 {
@@ -121,7 +125,8 @@ namespace ePortaria
                 }
                 else
                 {
-                    this.entidadeVM.Mensagem = "Problemas no Login";
+                    this.entidadeVM.Mensagem = "Você já está logado em outro dispositivo";
+					this.MainPage = new Login();
                 }
 
             }

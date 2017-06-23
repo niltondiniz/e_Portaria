@@ -22,7 +22,7 @@
                                 <Label TextColor="White" Text="Deslize para alternar o controle" FontSize="12" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
                                 <Image HorizontalOptions="End" Source="right_arrow.png" />
                             </StackLayout>
-                            <Button Grid.Row="1" Text="Aperte" x:Name="nome" Command="{Binding SendCommand}" />
+                            <Button Grid.Row="1" Text="Aperte" x:Name="nome" Clicked="BleDevices"/>
                             <StackLayout Grid.Row="2" BackgroundColor="#80000000" Padding="12">
                                 <Label TextColor="White" Text="{Binding descricao}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
                             </StackLayout>
