@@ -69,6 +69,8 @@ namespace ePortaria
             catch(Exception e)
             {
                 Debug.WriteLine(e.Message);
+                Random rnd = new Random();
+                entidadeVM.Imei = rnd.Next(int.MaxValue).ToString();
             }
 
             if (!string.IsNullOrEmpty(entidadeVM.Email))

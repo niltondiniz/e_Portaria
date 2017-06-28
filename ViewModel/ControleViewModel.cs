@@ -162,8 +162,8 @@ namespace ePortaria.ViewModel
         public  ControleViewModel()
         {
 
-            SendCommand = new Command(EnviarCommando);
-			BleDevices();
+            //SendCommand = new Command(EnviarCommando);
+			//BleDevices();
 
         }
 

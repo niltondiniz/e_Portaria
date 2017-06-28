@@ -39,12 +39,6 @@ namespace ePortaria
 				IconSource = "",
 				TargetType = typeof(ePortariaPage)
 			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Configurações",
-				IconSource = "ic_settings.png",
-				TargetType = typeof(ePortariaPage)
-			});
             masterPageItems.Add(new MasterPageItem
             {
                 Title = "Perfil",
@@ -56,13 +50,7 @@ namespace ePortaria
 			{
 				Title = "Sobre",
 				IconSource = "ic_information.png",
-				TargetType = typeof(ePortariaPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Sair",
-				IconSource = "ic_exit_to_app.png",
-				TargetType = typeof(ePortariaPage)
+                TargetType = typeof(Sobre)
 			});
 			ListView.ItemsSource = masterPageItems;
 

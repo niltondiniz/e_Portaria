@@ -8,18 +8,32 @@ namespace ePortaria
 {
     public partial class Controle : ContentPage
     {
+        private ePortaria.Model.Controle controle = null;
+
         public Controle()
         {
             InitializeComponent();
             BindingContext = ((App)App.Current).controleViewModel;
-            //listControles.ItemsSource = ((App)App.Current).controleViewModel.ListaControle;
+
+			CarouselZoos.ItemSelected += (sender, args) =>
+            {
+                controle = args.SelectedItem as ePortaria.Model.Controle;
+            	if (controle == null)
+            		return;
+
+                Title = controle.descricao;
+            };
+
         }
 
-        void BleDevices(object sender, EventArgs e)
+        void SendCommand(object sender, EventArgs e)
         {
-            //((App)App.Current).controleViewModel.BleDevices();
-            RequestClient.SendControle("http://192.168.1.62","/?1");
+            //Verifica o tipo de controle
+            if(controle.conexao=="1"||controle.conexao=="3"){
+                //SendViaBluetooth(controle.bluetooth); 
+            }else{
+                RequestClient.SendControle(controle.ip, "/?1");
+            }
         }
-
     }
 }

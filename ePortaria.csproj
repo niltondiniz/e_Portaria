@@ -45,6 +45,9 @@
     <EmbeddedResource Include="View\Controle.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Sobre.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -87,6 +90,9 @@
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Model\Controle.cs" />
     <Compile Include="ViewModel\ControleViewModel.cs" />
+    <Compile Include="View\Sobre.xaml.cs">
+      <DependentUpon>Sobre.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />

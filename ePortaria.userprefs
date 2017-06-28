@@ -1,9 +1,6 @@
 ﻿<Properties StartupConfiguration="{6991A336-AB54-4ED9-AC3B-FFDBF8A5BC80}|Default" GitUserInfo="UsingMD" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="Status do ePortaria">
     <Files>
-      <File FileName="ViewModel/ControleViewModel.cs" Line="151" Column="1" />
-      <File FileName="ViewModel/ViewModelBase.cs" Line="36" Column="1" />
-      <File FileName="ViewModel/EntidadeViewModel.cs" Line="97" Column="8" />
       <File FileName="Status do ePortaria" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -13,11 +10,10 @@
       <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/ControleViewModel.cs" relfile="ViewModel/ControleViewModel.cs" line="214" column="37" />
       <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/ControleViewModel.cs" relfile="ViewModel/ControleViewModel.cs" line="139" column="1" />
       <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/ControleViewModel.cs" relfile="ViewModel/ControleViewModel.cs" line="151" column="1" />
-      <Breakpoint file="/Users/niltondiniz/Projects/ePortaria/ViewModel/ControleViewModel.cs" relfile="ViewModel/ControleViewModel.cs" line="166" column="17" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ePortaria.Droid PreferredExecutionTarget="Xamarin.Player.XamarinStudio.DefaultPlayerExecutionTarget" />
+  <MonoDevelop.Ide.ItemProperties.ePortaria.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.ItemProperties.ePortaria.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.099BD27E-BA80-4E25-9FFF-5ABC03B399B7" />
   <MultiItemStartupConfigurations />
 </Properties>
